@@ -1,0 +1,65 @@
+HTTP Status 500 – Internal Server Error
+
+
+Type Exception Report
+
+Message An exception occurred processing [userdetails.jsp] at line [14]
+
+Description The server encountered an unexpected condition that prevented it from fulfilling the request.
+
+Exception
+org.apache.jasper.JasperException: An exception occurred processing [userdetails.jsp] at line [14]
+
+11: 
+12: <h3> User Details!</h3>
+13: <!-- Custom Tag -->
+14: <abc:displayUser/>
+15: 
+16: </body>
+17: </html>
+
+
+Stacktrace:
+	org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:611)
+	org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:490)
+	org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:378)
+	org.apache.jasper.servlet.JspServlet.service(JspServlet.java:326)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+
+
+Root Cause
+javax.servlet.ServletException: java.lang.Error: Unresolved compilation problem: 
+	Unhandled exception type IOException
+
+	org.apache.jasper.runtime.PageContextImpl.handlePageException(PageContextImpl.java:664)
+	org.apache.jsp.userdetails_jsp._jspService(userdetails_jsp.java:155)
+	org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:71)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:467)
+	org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:378)
+	org.apache.jasper.servlet.JspServlet.service(JspServlet.java:326)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+
+
+Root Cause
+java.lang.Error: Unresolved compilation problem: 
+	Unhandled exception type IOException
+
+	com.fujitsu.customTag.ResultHandler.doStartTag(ResultHandler.java:60)
+	org.apache.jsp.userdetails_jsp._jspx_meth_abc_005fdisplayUser_005f0(userdetails_jsp.java:173)
+	org.apache.jsp.userdetails_jsp._jspService(userdetails_jsp.java:138)
+	org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:71)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:467)
+	org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:378)
+	org.apache.jasper.servlet.JspServlet.service(JspServlet.java:326)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+
+
+Note The full stack trace of the root cause is available in the server logs.
+
+
+Apache Tomcat/9.0.43
