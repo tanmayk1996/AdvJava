@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>ServletConfig</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+  <param-name>database</param-name>
+  <param-value>oracle</param-value>
+  </context-param>
+ 
+  <servlet>
+  <servlet-name>a</servlet-name>
+  <servlet-class>One</servlet-class>
+  
+  <init-param>
+  <param-name>msg</param-name>
+  <param-value>it is first servlet</param-value>
+  </init-param>
+  
+  </servlet>
+  
+  <servlet>
+  <servlet-name>b</servlet-name>
+  <servlet-class>Two</servlet-class>
+  
+  <init-param>
+  <param-name>msg</param-name>
+  <param-value>this is second servlet</param-value>
+  </init-param> 
+  </servlet>
+  
+   <servlet-mapping>
+  <servlet-name>a</servlet-name>
+  <url-pattern>/One1url</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet-mapping>
+  <servlet-name>b</servlet-name>
+  <url-pattern>/Two2url</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>
